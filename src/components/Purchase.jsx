@@ -71,13 +71,13 @@ let handleTotal = (value, id)=>{
 
   return (
     <>
-      <div className="col col-md-8">
+      <div className="col col-12 col-md-8 mb-4">
         <div className="row dataCard">
-          <div className="col col-sm-4 col-md-3 mt-3">
+          <div className="col col-4 col-sm-4  col-md-3 mt-3">
             <img src={data.thumbnail} alt="" />
           </div>
           <div
-            className="col text-content "
+            className="col col-7 text-content "
             ref={scrollContainerRef}
             style={{
               height: "150px",
@@ -99,7 +99,7 @@ let handleTotal = (value, id)=>{
           </div>
         </div>
       </div>
-      <div className="col col-md-4 ">
+      <div className="col col-md-4">
         <div className="quantity m-2">
           <select  onChange={(e)=>{setValue(e.target.value), handleTotal(e.target.value, data.id)}} className="form-select">
             <option value="1">1</option>
@@ -113,13 +113,13 @@ let handleTotal = (value, id)=>{
         </div>
         <div className="totalQuantity">
           <p className="fw-bold">Total Price :</p>
-          <p>$. {data.price * value}  {temp}</p>
+          <p>$.{temp}</p>
         </div>
-        <div className="removeCart" onClick={()=> handleDelete(data.id)}>
-          <p>Remove</p>
+        <div className="removeCart" >
+          <p onClick={()=> handleDelete(data.id)}>Remove</p>
         </div>
       </div>
-      <hr className="bg-danger col-md-12" />
+      {/* <hr className="bg-danger col-md-12 mt-2" /> */}
     </>
   );
 };

@@ -9,7 +9,7 @@ const Navigation = () => {
     let navigate = useNavigate()
   return (
     <>
-       <nav className="navbar navbar-expand-lg navbar-light bg-light">
+       <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div className="container px-4 px-lg-5">
             <a className="navbar-brand" href="#!">Start Bootstrap</a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse"

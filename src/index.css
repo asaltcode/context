@@ -8,15 +8,16 @@
   box-shadow: 2px 3px 20px rgb(197, 196, 196);
 }
 .addToCart{
-  background-color: #F6F5F8;
-  /* padding-bottom: 20px; */
+  background-image: repeating-linear-gradient(282deg, hsla(264,0%,51%,0.12) 0px,transparent 7px,hsla(264,0%,51%,0.12) 12px,transparent 19px,hsla(264,0%,51%,0.12) 24px,transparent 31px,hsla(264,0%,51%,0.12) 36px),repeating-linear-gradient(176deg, hsla(264,0%,51%,0.12) 0px,transparent 7px,hsla(264,0%,51%,0.12) 12px,transparent 19px,hsla(264,0%,51%,0.12) 24px,transparent 31px,hsla(264,0%,51%,0.12) 36px),repeating-linear-gradient(314deg, hsla(264,0%,51%,0.12) 0px,transparent 7px,hsla(264,0%,51%,0.12) 12px,transparent 19px,hsla(264,0%,51%,0.12) 24px,transparent 31px,hsla(264,0%,51%,0.12) 36px),linear-gradient(90deg, rgb(37,37,37),rgb(37,37,37));
+  background-attachment: fixed;
+  color: white;
 }
 .addToCart img{
   height: 100px;
   width: 150px;
   object-fit: cover;
   border-radius: 10px;
-  box-shadow: 3px 3px 15px gray;
+  box-shadow: 3px 3px 15px rgb(193, 193, 193);
 }
 .productCard{
   height: 170px;
@@ -40,24 +41,28 @@
   padding: 1px 5px 5px 5px;
   cursor: pointer;
   transition:  .4s;
+  box-shadow: 0 0 10px rgb(85, 255, 47);
+  color: rgb(85, 255, 47);
 }
 .removeCart p:hover{
-  box-shadow: 0 0 10px rgb(255, 47, 47);
-  
+  box-shadow: 0 0 10px rgb(255, 0, 0);
+  color: red;
 }
 
  .subTotal, .shipping, .total, .quantity, .totalQuantity{
   display: flex;
   justify-content: space-between;
+  
 }
 
 .text-content{
+  background-color: rgb(62, 62, 62);
+  color: white;
   height: 150px;
   overflow-y: scroll;
   margin-right: 10px;
   position: relative;
-  /* border: 1px solid gray; */
-  box-shadow:  inset 5px 5px 10px rgb(211, 211, 211);
+  box-shadow:  inset 5px 5px 10px rgb(175, 255, 252), inset -5px -5px 10px rgb(249, 162, 255);
   border-radius: 10px;
 }
 .text-content::-webkit-scrollbar{
@@ -84,11 +89,11 @@
   transform: rotate(180deg);
   padding: 2px 6px;
   border-radius: 50%;
-  color: gray;
+  color: black;
 }
 .Down span{
   transition: 0.7s;
-  color: gray;
+  color: rgb(2, 2, 2);
   padding: 2px 6px;
   border-radius: 50%;
 }
