@@ -1,0 +1,98 @@
+.card{
+  transition: 0.4s;
+}
+.card img{
+  border-bottom: 1px solid gray;
+}
+.card:hover{
+  box-shadow: 2px 3px 20px rgb(197, 196, 196);
+}
+.addToCart{
+  background-color: #F6F5F8;
+  /* padding-bottom: 20px; */
+}
+.addToCart img{
+  height: 100px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px gray;
+}
+.productCard{
+  height: 170px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  /* margin: 10px; */
+}
+.quantity select {
+  width: 60px;
+}
+.removeCart{
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  color: rgb(255, 72, 0);
+}
+.removeCart p {
+  border-radius: 50px;
+  padding: 1px 5px 5px 5px;
+  cursor: pointer;
+  transition:  .4s;
+}
+.removeCart p:hover{
+  box-shadow: 0 0 10px rgb(255, 47, 47);
+  
+}
+
+ .subTotal, .shipping, .total, .quantity, .totalQuantity{
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-content{
+  height: 150px;
+  overflow-y: scroll;
+  margin-right: 10px;
+  position: relative;
+  /* border: 1px solid gray; */
+  box-shadow:  inset 5px 5px 10px rgb(211, 211, 211);
+  border-radius: 10px;
+}
+.text-content::-webkit-scrollbar{
+  width: 0;
+}
+
+
+.arrow{
+  display: flex;
+  justify-content: end;
+  position: relative;
+}
+.Down{
+  position: sticky;
+  bottom: 5px;
+  right: 0;
+}
+.Top{
+  position: sticky;
+  top: 5px; 
+}
+.Top span{
+  transition: 0.7s;
+  transform: rotate(180deg);
+  padding: 2px 6px;
+  border-radius: 50%;
+  color: gray;
+}
+.Down span{
+  transition: 0.7s;
+  color: gray;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+.Down span:hover, .Top span:hover{
+  background-color: black;
+  color: white;
+}
