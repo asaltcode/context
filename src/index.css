@@ -15,11 +15,13 @@ body{
   color: white;
 }
 .addToCart img{
+  margin-top: 6px;
+  outline: 1px solid white;
   height: 100px;
   width: 150px;
   object-fit: cover;
   border-radius: 10px;
-  box-shadow: 3px 3px 15px rgb(193, 193, 193);
+  box-shadow: 0 0 25px #000000;
 }
 .productCard{
   height: 170px;
@@ -59,14 +61,13 @@ body{
 }
 
 .cart-content{
-  background-color: rgb(62, 62, 62);
   color: white;
   height: 150px;
   overflow-y: scroll;
   margin-right: 10px;
   margin-left: 10px;
   position: relative;
-  box-shadow:  inset 5px 5px 10px rgb(175, 255, 252), inset -5px -5px 10px rgb(249, 162, 255);
+  box-shadow:  1px 1px 20px rgb(0, 0, 0), inset -5px -5px 10px rgb(0, 0, 0);
   border-radius: 10px;
 }
 .cart-content::-webkit-scrollbar, .text-content::-webkit-scrollbar{

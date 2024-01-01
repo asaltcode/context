@@ -4,7 +4,11 @@ import { FaAngleDown } from "react-icons/fa6";
 const Purchase = ({ data, product, setProduct, temp, setTemp, tempArray, setHoolTotal}) => {
   
   let [value, setValue] = useState(1)
-  let [price, setPrice] = useState();   
+
+  let [title, setTitle] = useState("");   
+  let [description, setDescription] = useState("");   
+  let [price, setPrice] = useState("");   
+  let [thumbnail, setThumbnail] = useState("");   
 
 
   const scrollContainerRef = useRef(null);
@@ -21,7 +25,22 @@ const Purchase = ({ data, product, setProduct, temp, setTemp, tempArray, setHool
     }
   };
 // handleDelete 
+// let handleDelete = (id)=>{
+//     let index;
+//     let newArray = [...product];
+//     for(let i = 0; i < product.length; i++){
+//         if(product[i].id === id){
+//            index = i
+//            break
+//         }
+//     }
+// newArray.splice(index, 1)
+// setProduct(newArray);
+// setTemp(newArray.map((e)=> e.price))
+// setHoolTotal(newArray.reduce((p, c) => {return p = p + c.price}, 0))
+// }
 let handleDelete = (id)=>{
+    let tempTo = [...tempArray]
     let index;
     let newArray = [...product];
     for(let i = 0; i < product.length; i++){
@@ -31,20 +50,12 @@ let handleDelete = (id)=>{
         }
     }
 newArray.splice(index, 1)
+tempTo.splice(index, 1)
 setProduct(newArray);
-setTemp(newArray.map((e)=> e.price))
-setHoolTotal(newArray.reduce((p, c) => {return p = p + c.price}, 0))
+setTemp(tempTo.map((e)=> e))
+console.log("delete", tempArray)
+setHoolTotal(tempTo.reduce((p, c) => {return p = p + c}, 0))
 }
-
-// Total handles
-
-let [totals,setTotals] = useState([])
-useEffect(()=>{
-  for(let i = 0; i < product.length; i++){
-    totals.push(product[i].price)
-  }
-})
-
 
 let handleTotal = (value, id)=>{
   let newArray = [...tempArray]
@@ -57,15 +68,10 @@ let handleTotal = (value, id)=>{
   }
   let tempTotal = product[index].price * value
   let to = newArray.map(e => e)
-  to.splice(index, 1, tempTotal)
-  
-
-  
- console.log(tempArray)
+  to.splice(index, 1, tempTotal)  
+  console.log(to)
  setTemp(to.map(e => e))
- setHoolTotal(to.reduce((p, c) => c = p + c))
-  
-
+ setHoolTotal(to.reduce((p, c) => c = p + c),0) 
   }
 
 
@@ -76,7 +82,7 @@ let handleTotal = (value, id)=>{
             <div className="col col-sm-4  col-md-3 mt-3">
                 <img src={data.thumbnail} alt="" />
             </div>
-            <div className="col col-7 text-content" ref={scrollContainerRef} style={{ height: "150px" ,overflowY: "scroll" , }}>
+            <div className="col  text-content" ref={scrollContainerRef} style={{ height: "150px" ,overflowY: "scroll" , }}>
                 <div className="arrow Top">
                     <span onClick={scrollToTop}>
                         <FaAngleDown />

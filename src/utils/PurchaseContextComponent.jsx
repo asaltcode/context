@@ -1,11 +1,12 @@
-import React, {useState, useContext, useEffect} from 'react'
+import React, {useState, useContext} from 'react'
 import { CardContext } from './CardContextComponent'
 
 export const PurchaseContext = React.createContext()
 
 const PurchaseContextComponent = ({children}) => {
 let {products} = useContext(CardContext)
-let [product, setProduct] = useState(products)
+let content = [...products]
+let [product, setProduct] = useState(content)
 
   return (
     <PurchaseContext.Provider value={{product, setProduct}}>
