@@ -15,7 +15,7 @@ const AddToCard = () => {
   return (
     <>
       <div className="container-fulid pb-5 mt-5  addToCart">
-        <div className="btn btn-outline-dark m-4" onClick={()=> navigation("/shop-content")}
+        <div className="btn btn-outline-light m-4" onClick={()=> navigation("/shop-content")}
             >
             Back
         </div>

@@ -1,3 +1,7 @@
+body{
+  background-image: repeating-linear-gradient(282deg, hsla(264,0%,51%,0.12) 0px,transparent 7px,hsla(264,0%,51%,0.12) 12px,transparent 19px,hsla(264,0%,51%,0.12) 24px,transparent 31px,hsla(264,0%,51%,0.12) 36px),repeating-linear-gradient(176deg, hsla(264,0%,51%,0.12) 0px,transparent 7px,hsla(264,0%,51%,0.12) 12px,transparent 19px,hsla(264,0%,51%,0.12) 24px,transparent 31px,hsla(264,0%,51%,0.12) 36px),repeating-linear-gradient(314deg, hsla(264,0%,51%,0.12) 0px,transparent 7px,hsla(264,0%,51%,0.12) 12px,transparent 19px,hsla(264,0%,51%,0.12) 24px,transparent 31px,hsla(264,0%,51%,0.12) 36px),linear-gradient(90deg, rgb(37,37,37),rgb(37,37,37));
+  background-attachment: fixed;
+}
 .card{
   transition: 0.4s;
 }
@@ -8,8 +12,6 @@
   box-shadow: 2px 3px 20px rgb(197, 196, 196);
 }
 .addToCart{
-  background-image: repeating-linear-gradient(282deg, hsla(264,0%,51%,0.12) 0px,transparent 7px,hsla(264,0%,51%,0.12) 12px,transparent 19px,hsla(264,0%,51%,0.12) 24px,transparent 31px,hsla(264,0%,51%,0.12) 36px),repeating-linear-gradient(176deg, hsla(264,0%,51%,0.12) 0px,transparent 7px,hsla(264,0%,51%,0.12) 12px,transparent 19px,hsla(264,0%,51%,0.12) 24px,transparent 31px,hsla(264,0%,51%,0.12) 36px),repeating-linear-gradient(314deg, hsla(264,0%,51%,0.12) 0px,transparent 7px,hsla(264,0%,51%,0.12) 12px,transparent 19px,hsla(264,0%,51%,0.12) 24px,transparent 31px,hsla(264,0%,51%,0.12) 36px),linear-gradient(90deg, rgb(37,37,37),rgb(37,37,37));
-  background-attachment: fixed;
   color: white;
 }
 .addToCart img{
@@ -53,19 +55,24 @@
   display: flex;
   justify-content: space-between;
   
+  
 }
 
-.text-content{
+.cart-content{
   background-color: rgb(62, 62, 62);
   color: white;
   height: 150px;
   overflow-y: scroll;
   margin-right: 10px;
+  margin-left: 10px;
   position: relative;
   box-shadow:  inset 5px 5px 10px rgb(175, 255, 252), inset -5px -5px 10px rgb(249, 162, 255);
   border-radius: 10px;
 }
-.text-content::-webkit-scrollbar{
+.cart-content::-webkit-scrollbar, .text-content::-webkit-scrollbar{
+  width: 0;
+}
+body::-webkit-scrollbar{
   width: 0;
 }
 

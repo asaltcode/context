@@ -3,7 +3,6 @@ import Card from './Card';
 import { CardContext } from '../utils/CardContextComponent';
 
 const ShopContent = () => {
-    // let {shopDetail} = useContext(CardContext)
     let {products} = useContext(CardContext)
   return (
     <>
